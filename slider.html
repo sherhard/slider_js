@@ -7,8 +7,9 @@
 	<style type="text/css"> 
 
 		.slider{
-			display: flex;
-			justify-content: space-between;
+			width: 90%;
+			margin: 0 auto;
+			text-align: center;
 		}
 		.slider img{
 			width: 300px;
@@ -20,43 +21,15 @@
 	
 	<div>
 		<div class="slider">
-			<img src="carusel/1.jpg" alt="" class="img" style="display: none;">
-			<img src="carusel/2.jpg" alt="" class="img" >
-			<img src="carusel/3.jpg" alt="" class="img" style="display: none;">
+			<input type="button" id="show-prev-btn" value="prev">
+			<img src="" id='slider-img'>
+			<input type="button" id="show-next-btn" value="next">
 
 		</div>
 		<div>
-			<input type="button" id="prev" value="prev">
-			<input type="button" id="next" value="next">
+			
 		</div>
 	</div>
-	<script type="text/javascript">
-
-		    let img=document.getElementsByClassName('img');
-		    let prev=document.getElementById('prev');
-		    let next=document.getElementById('next');
-
-
-
-		    next.addEventListener('click',onNext);
-		    function onNext(){
-		    	for(let i=0; i<img.length; i++){
-		    		img[1].src=img[2].src;
-		    		
-		    	}
-		    }
-
-		    prev.addEventListener('click',onPrev);
-
-		    function onPrev(){
-		    	for(let i=0; i<img.length; i++){
-		    		img[1].src=img[0].src;
-		    		
-		    	}
-		    }
-
-
-
-	</script>
+	<script type="text/javascript" src="slider.js"></script>
 </body>
 </html>
